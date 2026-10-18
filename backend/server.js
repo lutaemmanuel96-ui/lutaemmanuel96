@@ -78,7 +78,7 @@ app.post('/forgot-password', async (req, res) => {
         res.status(500).json({ message: 'Failed to send email', error: error.toString() });
     }
 });
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log('Server running on port ${PORT}');
 });
