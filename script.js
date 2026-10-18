@@ -1,5 +1,5 @@
 // Replace this with your actual Render URL when deployed
-const BASE_URL = 'http://localhost:3000'; // Change to 'https://your-app-name.onrender.com' for production
+const BASE_URL = 'https://luta-backend.onrender.com';
 
 // 1. Handle Login
 const loginForm = document.getElementById('loginForm');
