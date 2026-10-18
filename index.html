@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <h2>Welcome back</h2>
+        <p>Login to your account</p>
+
+        <!-- Wrapped inputs and button in a form tag -->
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email address" required>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <div class="row">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#" id="forgotPasswordLink">Forgot password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+        <!--Link to signup.html-->
+        <span>Don't have an account? <a href="signup.html">Sign up</a></span>
+    </div>
+
+    <!-- Link your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

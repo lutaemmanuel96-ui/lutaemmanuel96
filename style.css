@@ -1,0 +1,99 @@
+css
+*{     
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(red, green, blue, alpha);
+    width: 100%;
+    max-width: 400px;
+
+}
+.login h2 {
+    margin-bottom: 5px;
+    color: #333333;
+
+
+}
+.login p {
+    color: #777777;
+    margin-bottom: 25px;
+    font-size: 14px;
+    
+}
+.login input[type="Email"],
+.login input[type="password"]{
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.login input[type:"email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #007bff;
+
+}
+.row{
+    display: flex;
+    align-items: center ;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color:#555555;
+
+}
+.row a {
+    color:#007bff;
+    text-decoration: none;
+
+}
+.row a:hover {
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    padding: 12px;
+    background-color:#007bff;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+.login span {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color:#666666;
+}
+.login span a {
+    color:#007bff;
+    text-decoration: none;
+}
+.login span a:hover{
+    text-decoration:underline;
+}

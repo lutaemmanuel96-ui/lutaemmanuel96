@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <h2>Create Account</h2>
+        <p>Sign up to get started</p>
+
+        <form id="signupForm">
+            <input type="email" id="signupEmail" placeholder="Email address" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <span>Already have an account? <a href="index.html">Login</a></span>
+    </div>
+
+    <script>
+        const signupForm = document.getElementById('signupForm');
+
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            let users = JSON.parse(localStorage.getItem('registeredUsers')) || {};
+
+            if (users[email]) {
+                alert('An account with this email already exists! Please log in.');
+                window.location.href = 'index.html';
+            } else {
+                // Save user with password and verification status set to false
+                users[email] = {
+                    password: password,
+                    isVerified: false
+                };
+                localStorage.setItem('registeredUsers', JSON.stringify(users));
+
+                // Simulate sending a confirmation email notification
+                alert(`📧 Verification notification sent to ${email}!\n\n(Simulated: In a real app, check your inbox to confirm your account).`);
+                
+                // Redirect to a verification page or back to login
+                window.location.href = 'verify.html';
+            }
+        });
+    </script>
+</body>
+</html>
